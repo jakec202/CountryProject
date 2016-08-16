@@ -32,8 +32,8 @@ public class CountriesApp extends ReadandWrite {
 			else if (menuOption.equals("2")){
 				addCountry();
 			}else if (menuOption.equals("3")){
-				deleteCountry();
-			//	System.out.println("You do not have the nuclear capabilities to delete a country, please make another selection");
+	//			delete();
+				System.out.println("You do not have the nuclear capabilities to delete a country, please make another selection");
 			}else if(menuOption.equals("4")){
 				System.out.println("Thank you for playing?");
 				System.exit(0);

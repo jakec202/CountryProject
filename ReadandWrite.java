@@ -19,11 +19,11 @@ public class ReadandWrite {
 //		File countryFile = countryPath.toFile();
 
 		try (BufferedReader in = new BufferedReader(new FileReader(countryFile))) {
-			String aCountry = null;
-			while ((aCountry = in.readLine()) != null) {
-				countryList.add(aCountry);
+			String theCountries = null;
+			while ((theCountries = in.readLine()) != null) {
+				countryList.add(theCountries);
 				
-				System.out.println(aCountry);
+				System.out.println(theCountries);
 			}
 
 		} catch (IOException e) {
@@ -76,20 +76,20 @@ public class ReadandWrite {
 		System.out.println("What Country would you like to remove?");
 //		ArrayList<String> countryList = new ArrayList<>();
 
-//		Path writePath = Paths.get("\\Users\\admin\\Desktop\\Countries Project\\countryList.txt");
-//		File updatedCountryList = writePath.toFile();
+		Path writePath = Paths.get("\\Users\\admin\\Desktop\\Countries Project\\countryList.txt");
+		File updatedCountryList = writePath.toFile();
 
 		try (PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(countryFile, true)))) {
 			Scanner sc = new Scanner(System.in);
-			
 			String removeCountry = sc.nextLine();
+			
 			countryList.remove(removeCountry);
 			out.println(removeCountry);
 			System.out.println("You removed " + removeCountry);
 			System.out.println(countryList);
 			
 			
-
+		
 		} catch (IOException e) {
 
 			e.printStackTrace();
@@ -112,6 +112,6 @@ public class ReadandWrite {
 		
 		
 		
-
+	
 	
 } // class
